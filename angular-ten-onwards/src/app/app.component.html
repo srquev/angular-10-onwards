@@ -5,15 +5,16 @@
 
 
   <div class="radio-button">
-    <h4>choose background color and hover your mouse on below div.</h4>
+    <h4>Choose background color and hover your mouse on below div.</h4>
     <input type="radio" name="colors" (click)="color= 'yellow' "> Yellow
     <input type="radio" name="colors" (click)="color= 'cyan' "> Cyan
     <input type="radio" name="colors" (click)="color= 'pink' "> Pink
+    <input type="radio" name="colors" (click)="color= 'null' "> No Color
   </div>
 
 
   <div class="children">
-    <h4 style="text-align: center;">Child Components</h4>
+    <h4 style="text-align: center; margin-top: 0;">Child Components</h4>
     <div class="first" [appHighlight]="color" defaultColor="indigo">
       <app-first></app-first>
     </div>
