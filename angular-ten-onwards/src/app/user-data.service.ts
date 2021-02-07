@@ -15,4 +15,8 @@ export class UserDataService {
   getUserData(){
       return this.httpClient.get('https://jsonplaceholder.typicode.com/posts');
   }
+
+  getUserProfileData(){
+    return this.httpClient.get('https://jsonplaceholder.typicode.com/photos')
+  }
 }

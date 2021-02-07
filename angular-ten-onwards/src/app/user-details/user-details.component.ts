@@ -8,18 +8,31 @@ import { UserDataService } from '../user-data.service';
 })
 export class UserDetailsComponent implements OnInit {
   public userDetails: any;
+  public isDataAvailable: boolean | undefined;
+  public userProfileData: any;
 
   constructor(private userDataService: UserDataService) { }
 
   ngOnInit(): void {
-    this.getUserData()
+    this.getUserData();
+    this.getUserProfileData();
   }
 
 
   getUserData():void{
+    this.isDataAvailable = false;
     this.userDataService.getUserData().subscribe((data)=> {
+      this.isDataAvailable = true;
       this.userDetails = data;
-      this.userDetails = this.userDetails.slice(0,10)
+      this.userDetails = this.userDetails.slice(0,10);
+    })
+  }
+
+  getUserProfileData(){
+    this.userDataService.getUserProfileData().subscribe((userData)=> {
+      console.log(userData);
+      this.userProfileData = userData;
+      this.userProfileData = this.userProfileData.slice(0,10);
     })
   }
 

@@ -1,4 +1,4 @@
-<div class="table-data">
+<div *ngIf="isDataAvailable; else loader" class="table-data">
     <table>
         <tr>
             <th>Player's Id</th>
@@ -15,3 +15,17 @@
         </tr>
     </table>
 </div>
+
+<div>
+    <div *ngFor="let userProf userProfileData">
+        {{userProf.thumbnailUrl}}
+        <img [src]="userProf.thumbnailUrl" >
+    </div>
+</div>
+
+
+<ng-template #loader>
+    <div class="loader">
+        <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+</ng-template>

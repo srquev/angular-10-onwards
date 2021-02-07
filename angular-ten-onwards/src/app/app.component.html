@@ -1,18 +1,20 @@
 <div class="app-component">
-  <div>
-    <h3 class="header">app component (root component)</h3>
-  </div>
   <div class="btn-group">
-    <div><strong>Naviagte To : </strong></div>
-    <div>
-      <button routerLink="user-details" class="nav-button">Player Details</button>
+    <!-- <div>
+      <a routerLink="user-details" class="nav-button">Player Details</a>
     </div>
     <div>
-      <button routerLink="cricket" class="nav-button">Cricket</button>
+      <a routerLink="cricket" class="nav-button">Cricket</a>
     </div>
     <div>
-      <button routerLink="football" class="nav-button">Football</button>
-    </div>
+      <a routerLink="football" class="nav-button">Football</a>
+    </div> -->
+
+    <ul>
+      <li><a routerLink="user-details" routerLinkActive class="active">Player's Details</a></li>
+      <li><a routerLink="cricket" routerLinkActive>Cricket</a></li>
+      <li><a routerLink="football" routerLinkActive>Football</a></li>
+    </ul>
   </div>
 
 
