@@ -1,10 +1,25 @@
 <div class="app-component">
   <div>
-    <h1 class="header">app component (root component)</h1>
+    <h3 class="header">app component (root component)</h3>
+  </div>
+  <div class="btn-group">
+    <div><strong>Naviagte To : </strong></div>
+    <div>
+      <button routerLink="user-details" class="nav-button">Player Details</button>
+    </div>
+    <div>
+      <button routerLink="cricket" class="nav-button">Cricket</button>
+    </div>
+    <div>
+      <button routerLink="football" class="nav-button">Football</button>
+    </div>
   </div>
 
 
-  <div class="radio-button">
+  
+
+<!-- 
+  <div class="radio-button" *ngIf="false">
     <h4>Choose background color and hover your mouse on below div.</h4>
     <input type="radio" name="colors" (click)="color= 'yellow' "> Yellow
     <input type="radio" name="colors" (click)="color= 'cyan' "> Cyan
@@ -13,14 +28,16 @@
   </div>
 
 
-  <div class="children">
+  <div class="children" *ngIf="false">
     <h4 style="text-align: center; margin-top: 0;">Child Components</h4>
     <div class="first" [appHighlight]="color" defaultColor="indigo">
       <app-first></app-first>
     </div>
 
-    <div class="second" [appHighlight]="color" defaultColor="orange">
+    <div class="second" [appHighlight]="color" defaultColor="orange" *ngIf="false">
       <app-second></app-second>
     </div>
-  </div>
+  </div> -->
+  <router-outlet></router-outlet>
 </div>
+

@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { HighlightDirective } from './highlight.directive';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HighlightDirective,
     FirstComponent,
-    SecondComponent
+    SecondComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

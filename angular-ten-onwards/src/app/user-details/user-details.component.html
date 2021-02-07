@@ -1,0 +1,17 @@
+<div class="table-data">
+    <table>
+        <tr>
+            <th>Player's Id</th>
+            <th>Player's Title</th>
+            <th>Player's Description</th>
+        </tr>
+        <tr *ngFor="let user of userDetails">
+            
+                <td>{{user.id}}</td>
+                <td>{{user.title.length>25 ? user.title.slice(0,25)+'...': user.title}}</td>
+                <td>{{user.body.length>80 ? user.body.slice(0,80)+'...': user.body}}</td>
+         
+
+        </tr>
+    </table>
+</div>

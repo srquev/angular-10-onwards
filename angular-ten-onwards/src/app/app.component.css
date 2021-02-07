@@ -1,18 +1,35 @@
-.app-component{
-    border: 1px solid rgb(134, 131, 131);
-    min-height: 400px;
+.app-component {
+  border: 1px solid rgb(134, 131, 131);
+  min-height: 400px;
 }
 
-.header{
-    text-align: center;
+.header {
+  text-align: center;
+  margin: 0;
 }
 
-.radio-button{
-    margin-bottom: 20px;
+.radio-button {
+  margin-bottom: 20px;
 }
 
-.children{
-    border: 1px dotted indigo;
-    margin: 10px;
-    padding: 10px;
+.children {
+  border: 1px dotted indigo;
+  margin: 10px;
+  padding: 10px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-button{
+    padding: 5px 10px;
+    background: #139079;
+    color: #fff;
+    outline: none;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 15px;
 }
